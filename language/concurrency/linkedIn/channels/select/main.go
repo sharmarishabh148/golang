@@ -36,7 +36,7 @@ func main() {
 		}
 	}
 	//time.Sleep(2 * time.Second)
-	fmt.Println("Main done")
+	//fmt.Println("Main done")
 
 }
 
