@@ -19,6 +19,24 @@ func findLen(head *ListNode) int {
 	}
 	return l
 }
+
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+	// I am going to use recursion here.
+	if l1 == nil {
+		return l2
+	}
+	if l2 == nil {
+		return l1
+	}
+	if l1.Val < l2.Val {
+		// elemnet of l1 is added and recur for next element from l1
+		l1.Next = mergeTwoLists(l1.Next, l2)
+		return l1
+	}
+	l2.Next = mergeTwoLists(l1, l2.Next)
+	return l2
+
+}
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	len1, len2 := findLen(headA), findLen(headB)
 	if len1 > len2 { // list A is bigger
