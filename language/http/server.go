@@ -57,7 +57,7 @@ var (
 )
 
 func main() {
-	var err error
+	//var err error
 	startAppServer()
 }
 func mapUrls() {
