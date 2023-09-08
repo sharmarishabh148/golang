@@ -18,7 +18,8 @@ func safeDiv(a, b int) (q int, err error) {
 			err = fmt.Errorf("%v", e)
 		}
 	}()
-	return a / b, nil
+	q = a / b
+	return q, nil
 }
 
 func safe(a, b int) int {

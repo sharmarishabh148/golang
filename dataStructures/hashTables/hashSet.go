@@ -12,7 +12,7 @@ type MyHashSet struct {
 	Entries []*Node
 }
 
-func Constructor() MyHashSet {
+func NewHashSet() MyHashSet {
 	return MyHashSet{Size: 999, Entries: make([]*Node, 999)}
 }
 
@@ -72,7 +72,7 @@ func (this *MyHashSet) Contains(key int) bool {
 }
 
 func main() {
-	obj2 := Constructor()
+	obj2 := NewHashSet()
 	obj2.Add(1)
 	obj2.Add(2)
 
