@@ -15,6 +15,12 @@ func main() {
 		copy(buf[:], s[i:si])
 		fmt.Printf("%2d: %q; codepoint: %#6x; encoded bytes: %#v\n", i, r, r, buf[:rl])
 	}
+
+	data := "We♥Go"
+	fmt.Println(data)
+	//c := '❤'
+	fmt.Println("Length: ", len(data))
+	fmt.Println("Rune Count: ", utf8.RuneCountInString(data))
 }
 
 /*
